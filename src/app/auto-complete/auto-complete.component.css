@@ -1,0 +1,40 @@
+a {
+  text-decoration: none;
+}
+
+.suggestions {
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  margin-left: 2.4%;
+  display: block;
+}
+
+#index-sug-box {
+  width: 586px;
+}
+
+.query-suggestions:hover {
+  background: #E3E3E3;
+}
+
+.suggestion-box {
+  width: 634px;
+  max-width: 100%;
+  border: 1px solid rgba(150,150,150,0.3);
+  background-color: white;
+  margin-top: 47px;
+  margin-left: -1px;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  .suggestion-box {
+    width: 95.2vw;
+  }
+}
+
+@media screen and (max-width: 436px) {
+  .suggestion-box {
+    display: none;
+  }
+}

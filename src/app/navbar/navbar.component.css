@@ -1,0 +1,141 @@
+.navbar-brand {
+  width: 140px;
+  height: auto;
+  padding: 15px 15px 0px 15px;
+  margin-right: 26px;
+}
+
+#navbar-header {
+  display: inline;
+  float: left;
+}
+
+#navbar-search {
+  display: inline;
+  float:left;
+  margin-left: -25px;
+}
+
+#navbar-dropdown-box {
+  float: right;
+  min-width: 45px;
+  margin-right: 20px;
+}
+
+.navbar-default {
+  background-color: rgb(255, 255, 255);
+  border-bottom: none;
+}
+
+.top-nav {
+  margin-bottom: 0px;
+  position: sticky;
+  top: -10px;
+}
+
+#navcontainer {
+  height: 65px;
+  width: 100vw;
+}
+
+#navcontainer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@media screen and (min-width:1920px) {
+  .navbar-brand{
+      width: 160px;
+      height: auto;
+  }
+
+  #navbar-search {
+    top:6px;
+  }
+}
+
+@media screen and (max-width:1079px) {
+  .navbar-brand{
+    margin-top: 2px;
+    width: 120px;
+  }
+
+  #navbar-search{
+    margin-left: -44px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  #navbar-dropdown-box {
+    margin-top: -36px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .navbar-brand{
+    margin-left: 38%;
+    height: auto;
+  }
+
+  #navbar-search {
+    margin-left: 2%;
+  }
+
+  .align-navsearch-btn {
+    margin-right: 1% !important;
+  }
+
+  #navbar-dropdown-box{
+    margin-right: 32px;
+    margin-top: -116px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  #navcontainer ul li {
+    display: inline;
+  }
+
+  .navbar-right {
+    padding-right: 20px;
+    font-size: 14px;
+    left: 95%;
+    position: absolute;
+  }
+
+  #navcontainer, #side-menu {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width:639px) {
+  .align-navsearch-btn {
+    margin-right: 2% !important;
+  }
+}
+
+@media screen and (max-width:479px) {
+  .navbar-brand{
+    margin-left: 33%;
+  }
+
+  #navbar-search {
+    margin-left: 2%;
+  }
+
+  .align-navsearch-btn {
+    margin-right: 3% !important;
+  }
+
+  .top-nav {
+    position: inherit;
+    top: 0px;
+  }
+}
+
+@media screen and (max-width:379px) {
+  .navbar-brand{
+    margin-left: 30%;
+  }
+}

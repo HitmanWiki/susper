@@ -1,0 +1,52 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <!-- Start ignoring HTMLLintBear -->
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <!-- Stop ignoring HTMLLintBear -->
+      <h2 class="modal-title" id="my-modal-label">Advanced Search</h2>
+    </div>
+
+    <div class="modal-body">
+      <ul class="nav nav-sidebar menugroup" *ngIf="selectedelements.length">
+        <li data-toggle="collapse">
+          <h3 class="section-heading">Applied Filters</h3>
+        </li>
+        <li class="filter-checkbox" *ngFor="let element of selectedelements">
+          <a (click)="removeurl(element.modifier)" class="menu-item-link">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked disabled> {{element.name}} <span class="badge">{{element.count}}</span>
+              </label>
+            </div>
+          </a>
+        </li>
+      </ul>
+
+      <div id="filtersearch" *ngFor="let nav of navigation$|async">
+        <ul class="nav nav-sidebar menugroup">
+          <li data-toggle="collapse" [attr.data-target]="'#'+nav.facetname">
+              <h3 class="section-heading">{{nav.displayname}}</h3>
+          </li>
+          <li class="filter-checkbox" *ngFor="let element of nav.elements">
+            <a (click)="changeurl(element.modifier,element)" class="menu-item-link">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> {{element.name}} <span class="badge">{{element.count}}</span>
+                </label>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal">Search</button>
+    </div>
+  </div>
+</div>
+
+<div id="sidebar" class="col-md-3">
+</div>

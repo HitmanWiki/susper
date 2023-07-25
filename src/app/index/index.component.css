@@ -1,0 +1,181 @@
+#index-page {
+  margin-top: -57px;
+}
+#search-bar {
+  position: fixed;
+  left: 50%;
+  margin-left: -290px;
+  margin-top: 27vh;
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+#set-susper-default {
+  display:none;
+}
+
+.dropdown-menu-box-homepage {
+  width: 100vw;
+}
+
+@media screen and (max-width: 480px) {
+  #set-susper-default h3 {
+    font-size: 14px;
+  }
+
+  #set-susper-default ol {
+    font-size: 12px;
+  }
+
+  #install-susper {
+    font-size: 12px;
+  }
+
+  #cancel-installation {
+    font-size: 12px;
+  }
+
+  div#susper-logo-fix {
+    margin-left: 33.5%;
+  }
+}
+
+@media screen and (max-width: 281px) {
+  #set-susper-default {
+    bottom: 80px;
+  }
+
+  #set-susper-default h3 {
+    font-size: 14px;
+  }
+
+  #set-susper-default ol {
+    font-size: 12px;
+  }
+
+  #install-susper {
+    font-size: 12px;
+  }
+
+  #cancel-installation {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-height: 584px) {
+  #set-susper-default {
+    bottom: 75px;
+  }
+
+  #set-susper-default h3 {
+    font-size: 14px;
+  }
+
+  #set-susper-default ol {
+    font-size: 12px;
+  }
+
+  #install-susper {
+    font-size: 12px;
+  }
+
+  #cancel-installation {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-height: 530px) {
+  #set-susper-default {
+    bottom: 75px;
+  }
+
+  #set-susper-default h3 {
+    font-size: 12px;
+  }
+
+  #set-susper-default ol {
+    font-size: 10px;
+  }
+
+  #install-susper {
+    font-size: 10px;
+  }
+
+  #cancel-installation  {
+    font-size: 10px;
+  }
+}
+
+#dropdown-icon {
+  float: left;
+  margin-left: 99vw;
+}
+
+.navbar-fixed-bottom {
+  z-index: -1;
+}
+
+#susper-logo-fix {
+  width: 150px;
+  margin-left: 35%;
+}
+
+#biglogo {
+  display: block;
+}
+
+.navbar-brand {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  margin:0 auto;
+}
+
+.navbar-toggle {
+  z-index:3;
+}
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width:100%;
+}
+
+@media screen and (max-width: 823px) {
+  #susper-logo-fix {
+    margin-left: 78%;
+  }
+}
+
+@media screen and (max-width: 767px) { 
+  #search-bar {
+    margin-left: -48%;
+  }
+
+  #susper-logo-fix {
+    margin-left: 37%;
+  }
+
+  #dropdown-icon {
+    margin-left: 93vw;
+  }
+}
+
+@media screen and (max-width: 435px) { 
+  #dropdown-icon {
+    margin-left: 94vw;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #susper-logo-fix {
+    margin-left: 52%;
+  }
+}
+

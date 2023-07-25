@@ -1,0 +1,187 @@
+<!-- Start ignoring BootLintBear-->
+<!-- Stop ignoring BootLintBear-->
+<div id="contact">
+  <nav class="navbar navbar-default nav-about">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#dropmenu">
+          <span class="icon-bar"></span> <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand contact-navbar" routerLink="/" title="Susper Search Engine">
+          <img alt="brand" class="navbar-logo" src="../../assets/images/susper.svg" />
+        </a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="dropmenu">
+        <ul class="nav navbar-nav navbar-collapse navbar-right">
+          <li><a routerLink="/privacy">Privacy</a></li>
+          <li><a routerLink="/terms">Terms</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="image-banner col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <img src="../../assets/images/boat.png" class="img-responsive banner" /> <br />
+  </div>
+
+  <div class="container">
+    <br />
+    <div class="about-sub-details">
+      <div class="row contact-title">
+        <h2 class="bold">Contact Us</h2>
+        <br />
+      </div>
+
+      <br />
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 sub-details">
+          <h5 class="bold">Susper</h5>
+          <p>
+            <a
+              href="https://www.openstreetmap.org/search?query=93%20Mau%20Than%20Street%2C%20Can%20Tho#map=19/10.03117/105.77529"
+              target="_blank"
+              >93 Mau Than Street<br />
+              Can Tho<br />
+              Viet Nam<br
+            /></a>
+            Phone +84 (0) 907 65 29 27<br /><a href="mailto: support@susper.net">
+              Email: support@susper.net</a
+            ><br />Board of Directors: Hong Phuc Dang<br />
+            Susper Ltd. is registered in Can Tho, Viet Nam.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="contact-sub-details">
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 contact-sub-details">
+          <p>
+            Report a safety or abuse issue affecting our products.<br />
+            If you know of a safety or abuse problem with any of Susper's services, we'd like to
+            hear about it right away. Please use our <a (click)="openModal()">contact form</a> to
+            report the issue.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer><app-footer-navbar></app-footer-navbar></footer>
+</div>
+
+<modal #ContactUsModal>
+  <div>
+    <a (click)="closeModal()" class="close-btn"
+      ><i
+        class="fa fa-times"
+        aria-hidden="true"
+        style="font-size: 2em; float: right; padding: 10px; cursor: pointer;"
+      ></i
+    ></a>
+  </div>
+
+  <form class="form-horizontal" method="POST" action="https://formspree.io/office@fossasia.org">
+    <fieldset>
+      <legend>Contact Form</legend>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="textinput">Your Name<sup>*</sup></label>
+
+        <div class="col-md-9">
+          <input
+            id="textinput"
+            name="yourName"
+            type="text"
+            placeholder="Your Name"
+            class="form-control input-md"
+            (ngModelChange)="checkValidity()"
+            [(ngModel)]="nameInput"
+            required=""
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label" a for="emailinput">Email<sup>*</sup></label>
+
+        <div class="col-md-9">
+          <input
+            id="emailinput"
+            name="email-address"
+            type="email"
+            placeholder="Email Address"
+            class="form-control input-md"
+            (ngModelChange)="checkValidity()"
+            [(ngModel)]="emailInput"
+            required=""
+          />
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label class="col-md-3 control-label" for="countrycode">Mobile Number<sup>*</sup></label>
+
+        <div class="col-md-9 mobile_input">
+          <select id="countrycode" name="countrycode" class="form-control">
+            <option
+              *ngFor="let countryCode of countryCodeList"
+              [value]="countryCode.value"
+              >{{ countryCode.description }}</option
+            >
+          </select>
+
+          <input
+            id="telephone"
+            name="telephone"
+            type="number"
+            placeholder="Mobile Number"
+            (ngModelChange)="checkValidity()"
+            [(ngModel)]="phoneNumberInput"
+            class="form-control input-md"
+            required=""
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-3 control-label" for="message">Message<sup>*</sup></label>
+
+        <div class="col-md-9">
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            placeholder="Minimum 100 characters required."
+            required=""
+            (ngModelChange)="checkValidity()"
+            [(ngModel)]="contactMessage"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-md-12 control-label" for="submit"></label>
+
+        <div class="col-md-12">
+          <button
+            id="submit"
+            name="submit"
+            class="btn btn-info sub-btn"
+            type="submit"
+            #submitButton
+            disabled
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</modal>
